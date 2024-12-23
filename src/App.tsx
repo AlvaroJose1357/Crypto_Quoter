@@ -1,3 +1,5 @@
+import CriptoSearchForm from "./components/CriptoSearchForm";
+
 function App() {
   return (
     <>
@@ -8,6 +10,7 @@ function App() {
         <div className="content">
           {/* Formulario
           Contenido del form */}
+          <CriptoSearchForm />
         </div>
       </div>
     </>

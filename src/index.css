@@ -16,6 +16,7 @@ body {
   background-size: cover;
   min-height: 100vh;
   font-family: "Outfit", sans-serif;
+  font-size: 2rem;
 }
 
 .container {
@@ -45,4 +46,41 @@ body {
   border-radius: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form label {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.form select {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #ecebeb;
+}
+
+.form [type="submit"] {
+  font-weight: 900;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--primary);
+  color: var(--black);
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form [type="submit"]:hover {
+  background-color: #0cb387;
 }
