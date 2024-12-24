@@ -5,14 +5,13 @@ export const CurrencySchema = z.object({
   name: z.string(),
 });
 
-// export const CryptoSchema = z.object({
-//   id: z.string(),
-//   name: z.string(),
-//   symbol: z.string(),
-//   rank: z.number(),
-//   price: z.number(),
-//   marketCap: z.number(),
-//   volume: z.number(),
-//   circulatingSupply: z.number(),
-//   change: z.number(),
-// });
+export const CryptoCurrencyResponseSchema = z.object({
+  CoinInfo: z.object({
+    FullName: z.string(),
+    Name: z.string(),
+  }),
+});
+// se coloca en array debido a que la respuesta de la api es un array de  y en el anterior estamos definiendo un objeto
+export const CryptoCurrenciesResponseSchema = z.array(
+  CryptoCurrencyResponseSchema
+);
