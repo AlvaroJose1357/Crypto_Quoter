@@ -6,6 +6,7 @@ import ErrorMessage from "./ErrorMessage";
 
 export default function CriptoSearchForm() {
   const cryptocurrencies = useCryptoStore((state) => state.cryptocurrencies);
+  const fetchData = useCryptoStore((state) => state.fetchData);
   // const { cryptocurrencies } = useCryptoStore();
   const [error, setError] = useState<string>("");
   const [pair, setPair] = useState<Pair>({
@@ -32,7 +33,7 @@ export default function CriptoSearchForm() {
     }
     setError("");
     // si la valicacion pasa consultamos la API
-    console.log(pair);
+    fetchData(pair);
   };
   return (
     <form
